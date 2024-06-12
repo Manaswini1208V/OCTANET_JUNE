@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial','Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', ' sans-serif';
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    color:#f08080;
+    font-size: 90px;
+    font-weight: bolder;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+h2 {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.section p {
+    font-weight: bold; 
+}
+
+.section {
+    text-align: center;
+    position: relative;
+    width: 33.33%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.section.latest::before {
+    background-image: url(https://media.post.rvohealth.io/wp-content/uploads/2020/09/599490-What-Are-the-Benefits-of-Using-a-Skin-Serum-1200x628-facebook-1200x628.jpg);
+}
+
+.section.popular::before {
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.p1lTpHzfQapYNh2Ob2nZEQHaE8&pid=Api&P=0&h=180);
+}
+
+.section.envy::before {
+    background-image: url(https://i.pinimg.com/236x/3f/68/96/3f689618be57b36a86201239ff93cf0b.jpg);
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.top {
+    width: 100%;
+    min-height: 60vh;
+    background-image: url(https://okcredit-blog-images-prod.storage.googleapis.com/2021/06/organicproducts1-1.jpg);
+    background-position: center;
+    position: relative;
+}
+
+.top .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text {
+    color: white;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.text h1 {
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+.rtext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rtext p {
+    font-size: 30px;
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.section.footer {
+    text-align: center;
+    padding: 10px; /* Reduce padding for a smaller footer */
+    background-color: #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section.footer li {
+    display: inline;
+    margin: 0 10px;
+}
+
+button {
+    color:white;
+    background-color:black;
+    margin-top: 10px; 
+}
+
+.big-button {
+    font-size: 20px; /* Increase font size */
+    padding: 15px 30px; /* Increase padding */
+}
+
+.buttonl {
+    text-align: center;
+    margin: 20px 0; /* Add margin for better spacing */
+}
+
+@media (max-width: 700px) {
+    .rtext {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text h1 {
+        font-size: 20vh;
+    }
+
+    .rtext {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        height: 20px;
+    }
+
+    .icons {
+        margin-right: 20px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
